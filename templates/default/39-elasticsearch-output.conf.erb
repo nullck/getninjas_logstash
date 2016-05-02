@@ -1,0 +1,8 @@
+output {
+  elasticsearch_http {
+        host => <%= @elasticsearch_ip %>
+		flush_size => <%= @elasticsearch_flush_time %>
+		idle_flush_time => <%= @elastic_idle_flush_time %>
+    	port => <%= @elasticsearch_port %>
+  	}
+}

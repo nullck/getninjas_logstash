@@ -1,0 +1,8 @@
+input {
+	redis {
+		host => <%= @redis_ip %>
+		data_type => "list"
+		key => "beaver:logstash"
+		add_field => [ "source", "redis" ]
+	}
+}
