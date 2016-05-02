@@ -1,3 +1,7 @@
+package 'Install python-pip' do
+	package_name 'python-pip'
+end
+
 bash 'install_curator' do
   user 'root'
   cwd '/tmp'
