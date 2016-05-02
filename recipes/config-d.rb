@@ -70,14 +70,14 @@ remote_directory "/etc/logstash/conf.d/patterns" do
 end
 
 cookbook_file "/etc/logstash/conf.d/01-lumberjack-input.conf" do
-	source "01-lumberjack-input.conf.erb"
+	source "01-lumberjack-input.conf"
 	owner "root"
 	group "root"
 	mode 0744
 end
 
 cookbook_file "/etc/logstash/conf.d/29-mutate-filter.conf" do
-	source "29-mutate-filter.conf.erb"
+	source "29-mutate-filter.conf"
 	owner "root"
 	group "root"
 	mode 0744
