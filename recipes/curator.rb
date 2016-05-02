@@ -1,5 +1,6 @@
 package 'Install python-pip' do
 	package_name 'python-pip'
+	action :install
 end
 
 bash 'install_curator' do
