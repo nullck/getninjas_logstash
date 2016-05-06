@@ -14,7 +14,7 @@ dpkg_package "logstash" do
 end
 
 node['getninjas_logstash']['extras_packages'].each do |pkg|
-  package pkg do
-    action :install
+  apt_package pkg do
+    action :upgrade
   end
 end
