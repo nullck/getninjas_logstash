@@ -12,10 +12,3 @@ dpkg_package "logstash" do
 	source "/tmp/logstash_1.4.2-1-2c0f5a1_all.deb"
 	provider Chef::Provider::Package::Dpkg
 end
-
-node['getninjas_logstash']['extras_packages'].each do |pkg|
-  apt_package pkg do
-    action :upgrade
-    notifies :delayed
-  end
-end
