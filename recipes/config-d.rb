@@ -43,7 +43,7 @@ template '/etc/logstash/conf.d/02-redis-input.conf' do
   owner 'root'
   mode '0644'
   variables({
-  	:redis_ip => "#{node['getninjas_logstash']['instance_default']['redis_ip']}"
+  	:redis_ip => node['getninjas_logstash']['instance_default']['redis_ip']
   	})
   notifies :reload, "service[#{node['getninjas_logstash']['service_name']}]", :delayed
 end
@@ -54,7 +54,7 @@ template '/etc/logstash/conf.d/39-elasticsearch-output.conf' do
   owner 'root'
   mode '0644'
   variables({
-    :elasticsearch_ip => "#{node['getninjas_logstash']['instance_default']['elasticsearch_ip']}",
+    :elasticsearch_ip => node['getninjas_logstash']['instance_default']['elasticsearch_ip'],
     :elasticsearch_flush_time => node['getninjas_logstash']['instance_default']['elasticsearch_flush_time'],
     :elastic_idle_flush_time => node['getninjas_logstash']['instance_default']['elastic_idle_flush_time'],
     :elasticsearch_port => node['getninjas_logstash']['instance_default']['elasticsearch_port']

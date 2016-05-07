@@ -11,7 +11,7 @@ include_recipe "getninjas_logstash::install"
 include_recipe "getninjas_logstash::config-d"
 include_recipe "getninjas_logstash::restart"
 include_recipe "getninjas_logstash::curator"
-node.default['redis']['bind'] = node['getninjas_logstash']['instance_default']['redis_ip']
+node.default['redis']['bind'] = node['getninjas_logstash']['instance_default']['bind']
 node.default['redis']['port'] = node['getninjas_logstash']['instance_default']['redis_port']
 include_recipe "redis::server"
 include_recipe "getninjas_logstash::extra_packages"
