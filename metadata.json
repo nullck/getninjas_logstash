@@ -11,7 +11,7 @@
     "logstash": ">= 0.0.0",
     "redis": ">= 0.0.0",
     "apt": ">= 0.0.0",
-    "beaver": ">= 0.0.0.0"
+    "beaver": ">= 0.0.0"
   },
   "recommendations": {
   },
